@@ -1,0 +1,267 @@
+/* This is a separate file of the styling for the Brionne theme. */
+/* The styles may either be referenced in <head> or be copied and pasted into <style>. */
+
+/* The HTML for putting the styles is:
+<style type="text/css">
+    selector {
+        declaration: property;
+        declaration: property;
+    }
+</style> */
+/* right before </head> */
+
+/* For using the <link> tag, use:
+<link rel="stylesheet" href="[absolute location of .css file]"
+*/
+
+html {
+    -webkit-font-smoothing: antialiased;
+    /*background-color: #55a5d0;*/
+    background-color: #53a4d0; /* Temporary colour, for differentiating between each div's coloured border easier. */
+    text-decoration: none;
+}
+
+#container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    color: #3a3837;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar {
+    background-color: #d888a7;
+    position: fixed;
+    height: 50%;
+    /* If users can add more content in the sidebar, if possible, make it so that padding (possibly in .sidebar-content) will expand the height of the sidebar (.sidebar), thus making the height property unnecessary. Or, give the user the illusion of expansion by declaring the background colour of the sidebar.*/
+    overflow: scroll;
+    width: 150px;
+    top: 50px;
+    display: none; /* Remove this line when done with what the sidebar would block. I then was too tired to find out how to get the text to wrap around it, or to be only to the side.
+    Or even better: leave this here and override it with the sidebar displaying in a different media query. All this before the first media query is the mobile-first strategy where the sidebar should not be displayed. The sidebar will be a topbar instead.*/
+}
+
+/*.sidebar-content {
+    padding: 2px 4px 8px 16px;
+    text-align: right;
+}*/
+/* This rule might not be necessary since .sidebar is already set to not display in the mobile viewport, 
+and .sidebar-content would already not display.
+Move this rule to other non-mobile viewport media queries to get the content displayed. */
+
+/* Topbar styles */
+.topbar {
+    position: static;
+    text-align: center;
+    border-style: dotted;
+    overflow: auto;
+}
+/* Topbar's icon, pages, and search icon gotta be gridded to keep spacing it looks like. */
+
+.topbar > .custom-pages > p {
+    display: none; /* Temporarily not displaying for testing out the HasPages block */
+}
+
+.icon {
+    float: left;
+}
+
+.custom-pages {
+    float: none
+}
+
+.search {
+    float: right;
+}
+
+.post-content {
+    position: fixed;
+}
+
+
+/* This is where the magic of the appearances of each post happens. I wrote the previous sentence when I was fatigued, which is when my brain goes to places. Imagine my voice in a monotone and tired voice. I am excited for the magic. */
+.content {
+    /* text-align: center; 
+    Put in text-align: center when done with the format of the other post types. It makes working with them easier.*/
+    /* Posts can be centred on their own, because they are children of this div class. 
+    Could this be easier and more efficient than using text-align: center on each post type div? What if it messes up something else, even though it should not? Who knows what the browser will spit out later in development! */
+}
+
+/* Text Posts */
+.content-text {
+    text-align: center;
+    border-style: solid;
+    border-color: #adbdc1;
+    margin: 1em;
+}
+
+.content-text-title {
+    border-style: dotted;
+    border-bottom-style: solid;
+    margin: 1.25em;
+    text-align: left;
+}
+
+.text-title {
+    /* Style something for the title of the text post */
+}
+
+.post-body {
+    text-align: left;
+    margin: 1.25em;
+}
+/* End of Text Posts styles */
+
+/* Photo Posts */
+.content-photo {
+    text-align: center;
+    border-style: solid;
+    border-color: #4f6f80;
+    margin: 1em;
+}
+/* End of Photo Posts styles */
+
+/* Panorama Posts */
+.content-panorama {
+    text-align: center;
+    border-style: solid;
+    border-color: orange;
+    margin: 1em;
+}
+/* End of Panorama Posts styles */
+
+/* Photoset Posts */
+.content-photoset {
+    text-align: center;
+    border-style: solid;
+    border-color: yellow;
+    margin: 1em;
+}
+/* End of Photoset Posts styles */
+
+/* Quote Posts */
+.content-quote {
+    text-align: center;
+    border-style: solid;
+    border-color: yellowgreen;
+    margin: 1em;
+}
+/* End of Quote Posts styles */
+
+/* Link Posts */
+.content-link {
+    text-align: center;
+    border-style: solid;
+    border-color: green;
+    margin: 1em;
+}
+/* End of Link Posts styles */
+
+/* Chat Posts */
+.content-chat {
+    text-align: center;
+    border-style: solid;
+    border-color: blue;
+    margin: 1em;
+}
+/* End of Chat Posts styles */
+
+/* Video Posts */
+.content-video {
+    text-align: center;
+    border-style: solid;
+    border-color: midnightblue;
+    margin: 1em;
+}
+/* End of Video Posts styles */
+
+/* Audio Posts */
+.content-audio {
+    text-align: center;
+    border-style: solid;
+    border-color: purple;
+    margin: 1em;
+}
+/* End of Audio Posts styles */
+
+/* Answer Posts */
+.content-answer {
+    text-align: center;
+    border-style: solid;
+    border-color: darkviolet;
+    margin: 1em;
+}
+
+#question {
+    text-align: left;
+}
+
+#answer {
+    text-align: right;
+}
+
+#replies {
+    text-align: left;
+}
+/* End of Answer Posts styles */
+
+/* Now begins the magic for the pagination */
+
+.pagination {
+    text-align: center;
+    border-top-style: solid;
+    border-top-color: #4f6f80;
+    margin: 1em;
+}
+
+ul {
+    padding-top: 2em;
+}
+
+li {
+    display: inline;
+}
+
+li a {
+    display: block;
+}
+
+.flipper {
+    background-color: #fcfeff;
+    
+}
+
+#left-f {
+    float: left;
+}
+
+#right-f {
+    float: right;
+}
+
+/* Ta-dah! */
+
+/* Below is when the viewport is greater than the standard mobile viewport */
+@media screen and (min-width: 481px) {
+    /* .width-400 {
+        display: none; */
+    }
+}
+
+/* {CustomCSS} */
+/* The line above will be used for users to change the styling of the theme without having to edit the
+markup, which will then make the theme an unrecognised theme. This is preferred if the user wants to get
+updates of the theme and wants to change something on their own.
+If the user chooses to change a piece of the, provide documentation of the theme for anyone to read so they
+would not get so lost when adding in their own CSS. Make the documentation easy to understand, and provide
+images for easy reading.
+It's commented right now to avoid any possible errors that might cause Brackets to not want to use the
+styles sheet.*/
